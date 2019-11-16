@@ -1,0 +1,7 @@
+### spring boot2 多数据源读取名称是按照jdbc-url名称读取的，但是对于单数据源使用url
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:3306/springboot
+    username: root
+    password: 19920625
+    driver-class-name: com.mysql.jdbc.Driver

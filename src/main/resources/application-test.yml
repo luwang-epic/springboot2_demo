@@ -1,0 +1,3 @@
+# 测试环境中的一些配置
+multi_environment:
+    name: 测试环境

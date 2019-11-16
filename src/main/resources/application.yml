@@ -1,0 +1,42 @@
+### 演示spring boot 多数据源事务，因为这里我们是自己定义配置类，所以url要和类中保持一致，不需要使用jdbc-url
+spring:
+  datasource:
+      # 一个数据库
+      student:
+          url: jdbc:mysql://localhost:3306/springboot
+          username: root
+          password: 19920625
+          borrowConnectionTimeout: 30
+          loginTimeout: 30
+          maintenanceInterval: 60
+          maxIdleTime: 60
+          maxLifetime: 20000
+          maxPoolSize: 25
+          minPoolSize: 3
+          uniqueResourceName: studentDatasource
+      # 另一个数据库
+      user:
+          url: jdbc:mysql://localhost:3306/springboot_multi_datasource
+          username: root
+          password: 19920625
+          borrowConnectionTimeout: 30
+          loginTimeout: 30
+          maintenanceInterval: 60
+          maxIdleTime: 60
+          maxLifetime: 20000
+          maxPoolSize: 25
+          minPoolSize: 3
+          uniqueResourceName: userDatasource
+
+  #指定读取的配置文件，prd表示读取：application-prd.yml文件， test表示读取application-test.yml文件
+  profiles:
+      active: prd
+
+# 自定义端口
+server:
+  port: 8080
+
+#自定义的配置
+self_configuration:
+    name: zhangsan
+

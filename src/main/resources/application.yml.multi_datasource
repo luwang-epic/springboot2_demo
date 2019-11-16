@@ -1,0 +1,15 @@
+### 演示spring boot 多数据源， url需要使用jdbc-url，否则会报错
+spring:
+  datasource:
+      # 一个数据库
+      student:
+          jdbc-url: jdbc:mysql://localhost:3306/springboot
+          username: root
+          password: 19920625
+          driver-class-name: com.mysql.jdbc.Driver
+      # 另一个数据库
+      user:
+          jdbc-url: jdbc:mysql://localhost:3306/springboot_multi_datasource
+          username: root
+          password: 19920625
+          driver-class-name: com.mysql.jdbc.Driver

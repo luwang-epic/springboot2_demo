@@ -1,0 +1,1 @@
+org.springframework.boot.SpringApplicationRunListener=com.demo.multi_datasource_transaction.load_myself_config.MySpringApplicationRunListener
