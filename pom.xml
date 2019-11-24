@@ -40,7 +40,10 @@
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
-            <!-- 去掉springboot默认的配置logback日志 -->
+            <!--
+                去掉springboot默认的配置logback日志
+                如果使用默认的日志框架打印日志，配置文件名默认为 logback-spring.xml, 只需要用户加上该配置文件即可。
+            -->
             <exclusions>
                 <exclusion>
                     <groupId>org.springframework.boot</groupId>
